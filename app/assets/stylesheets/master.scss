@@ -1,41 +1,35 @@
 @import "bootstrap";
 
-html {
-  /* The white space taking up half the screen is destroying my eyeballs. Quick fix for that: */
-  background-color: black;
-}
+/*  NOTES & COMMENTS
 
-.navbar {
-  font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
-  font-weight: 200;
-  box-shadow: 0px 1px 3px #2a2a2a;
-  /* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
-  background: image_url('ripples.png');
-  
-  /* I added the following so that I could use the inverted version of a light bg pattern */
-  /* It made more sense to leave everything with the light layout and invert everything at once (I did want dark layout) */
+Items left with default lesson style / unstyled:
+  -Font stacks (Helvetica)    
 
-  filter: invert(1);
-}
 
-.navbar-inverse a.navbar-brand {
-  font-family: "Helvetica Neue", Helvetica; /* ~See font-family note in .navbar */
-  font-weight: 100;
-  color: white;
-}
+Items with placeholder / possibly temporary styling:
+  -(none)
 
-.hero {
-  background: image_url('hero.jpg') no-repeat center center fixed; /*Photo by Tim Mossholder*/
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 370px;          /*This value seems strange*/
-  box-shadow: 0px, 3px, 8px #2a2a2a;
+*/
+
+
+body{
+  background: image_url('bg.png'); /* Chosen font stack: */
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
+}
+
+
+.btn {
+  border-radius: 0;
+}
+
+.feature{
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .frosty {
@@ -55,6 +49,32 @@ h1, h2, h3, h4, h5, h6, .navbar {
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
 }
 
-.btn {
-  border-radius: 0;
+.hero {
+  background: image_url('hero.jpg') no-repeat center center fixed; /*Photo by Tim Mossholder*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 370px;          /*This value seems strange*/
+  box-shadow: 0px, 3px, 8px #2a2a2a;
+}
+
+/*  BOOTSTRAP ================================================================================================ */
+
+.navbar {
+  font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url('ripples.png'); /* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
+  
+  /* I added the following so that I could use the inverted version of a light bg pattern */
+  /* It made more sense to leave everything with the light layout and invert everything at once (I did want dark layout) */
+
+  filter: invert(1);
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: "Helvetica Neue", Helvetica; /* ~See font-family note in .navbar */
+  font-weight: 100;
+  color: white;
 }
