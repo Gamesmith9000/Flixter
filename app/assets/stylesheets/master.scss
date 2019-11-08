@@ -1,1 +1,21 @@
 @import "bootstrap";
+
+.navbar{
+  font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url('ripples.png');
+  
+  /* I added the following so that I could use the inverted version of a light bg pattern */
+  /* It made more sense to leave everything with the light layout and invert everything at once (I did want dark layout) */
+
+  filter: invert(1);
+}
+
+.navbar-inverse a.navbar-brand{
+  font-family: "Helvetica Neue", Helvetica; /* ~See font-family note in .navbar */
+  font-weight: 100;
+  color: white;
+}
+
+/* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
