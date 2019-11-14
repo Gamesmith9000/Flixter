@@ -4,15 +4,27 @@
 
 Items left with default lesson style / unstyled:
   -Font stacks (Helvetica)    
-
+  -booyah-box
 
 Items with placeholder / possibly temporary styling:
   -(none)
 
+Style Ideas/Tweaks/Issues
+  - The navbar shadow color is possibly inverted. Check on this
+  - Scaling font size, based on screen size (see saved article)
+  - Make the flash display area look better (it pushes the page). Try an overlay?
+  -Issue: On log-in page: the 'remember me' checkbox goes off teh screen
 */
 
 
-body{
+
+/*  HTML ===================================================================================================== */
+
+body, p {
+  color: #0E5592; /* Font change done during creation process */
+}
+
+body {
   background: image_url('bg.png'); /* Chosen font stack: */
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
@@ -21,9 +33,25 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 
+/*  CLASSES ================================================================================================== */
 
-.btn {
-  border-radius: 0;
+$booyah-box-box-shadow: 1px 1px 2px 0 #d0d0d0;
+$booyah-box-border-color-a: #e4e4e4;
+$booyah-box-border-color-b: #bebebd;
+
+.booyah-box {
+  -moz-box-shadow:    $booyah-box-box-shadow;
+  -webkit-box-shadow: $booyah-box-box-shadow;
+  box-shadow:         $booyah-box-box-shadow;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: $booyah-box-border-color-a $booyah-box-border-color-b $booyah-box-border-color-a $booyah-box-border-color-b;
+  padding: 10px;
+
+  h1, h2 {
+    margin: 10px;
+  }
+
 }
 
 .feature{
@@ -35,19 +63,40 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .frosty {
   background: rgba(0, 0, 0, 0.5);
   color: white;
+
+  h1, h2 {
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+    font-family: "Helvetica Neue", Helvetica;
+  }
+
+  h1 {
+    font-weight: 100;
+  }
+
+  h2 {
+    font-weight: 200;
+  }
 }
 
-.frosty h1{
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 100;
-  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
-}
+/* frosty: formatting style of lesson:
 
-.frosty h2 {
-  font-family: "Helvetica Neue", Helvetica;
-  font-weight: 200;
-  text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
-}
+  .frosty {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+  .frosty h1{
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
+
+  .frosty h2 {
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 200;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
+  }
+*/
 
 .hero {
   background: image_url('hero.jpg') no-repeat center center fixed; /*Photo by Tim Mossholder*/
@@ -55,26 +104,35 @@ h1, h2, h3, h4, h5, h6, .navbar {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 370px;          /*This value seems strange*/
-  box-shadow: 0px, 3px, 8px #2a2a2a;
+  height: 370px;          /*This value (the lesson recommented) seems strange or arbitrary. But coincidentally, the perfect part of image displays*/
+  box-shadow: 0px 3px 8px #2a2a2a; /*Lesson color*/
 }
 
 /*  BOOTSTRAP ================================================================================================ */
 
+$navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
+
+
+/* Add alert styles too */
+
+.btn {
+  border-radius: 0;
+}
+
 .navbar {
-  font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
+  font-family: $navbar-font-family;
   font-weight: 200;
-  box-shadow: 0px 1px 3px #2a2a2a;
+  box-shadow: 0px 1px 3px #2a2a2a; /* Lesson color was #2a2a2a - inverted version of that ends up as #d5d5d5 */
   background: image_url('ripples.png'); /* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
   
-  /* I added the following so that I could use the inverted version of a light bg pattern */
-  /* It made more sense to leave everything with the light layout and invert everything at once (I did want dark layout) */
+  /* For the backstory on this inversion styling, see my blog post:
+  https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
 
   filter: invert(1);
 }
 
 .navbar-inverse a.navbar-brand {
-  font-family: "Helvetica Neue", Helvetica; /* ~See font-family note in .navbar */
+  font-family: $navbar-font-family;
   font-weight: 100;
   color: white;
 }

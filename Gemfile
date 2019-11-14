@@ -30,8 +30,8 @@ gem 'jbuilder', '~> 2.5'
 
 
 gem 'jquery-rails'
-
-
+gem 'simple_form'
+gem 'devise'
 
 
 
