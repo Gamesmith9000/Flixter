@@ -49,7 +49,6 @@
       </nav>
 
 
-
       <p>[Add logic here: Try an overlay for flash messages. Page is being stretched.]</p>
 
       <% if notice.present? %>
@@ -61,17 +60,15 @@
       <% end %>
 
 
-
-
       <%= yield %>
     </div>
 
 
     <div id="footer">
       <div class="container">
-        <b>Footer Here</b>
+        <b>Teachers</b>
         <br />
-        <%= link_to 'Link' '#' %>
+        <%= link_to 'Build a Course', new_instructor_course_path %><!-- Changed from 'Teach a Course' -->
       </div>
     </div>
   </body>
