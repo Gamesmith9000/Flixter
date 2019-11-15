@@ -54,6 +54,10 @@ $booyah-box-border-color-b: #bebebd;
 
 }
 
+.clr {
+  clear: both;
+}
+
 .feature{
   width: 100%;
   padding-left: 5%;
@@ -133,7 +137,7 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
   filter: invert(1);
 }
 
-.help-block {
+.invalid-feedback {
   color: #ff3333;
   background-color: #FFEEEE;
   border-radius: 3px;
@@ -145,4 +149,5 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
   font-family: $navbar-font-family;
   font-weight: 100;
   color: white;
+
 }
