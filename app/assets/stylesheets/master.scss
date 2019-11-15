@@ -98,6 +98,8 @@ $booyah-box-border-color-b: #bebebd;
   }
 */
 
+
+
 .hero {
   background: image_url('hero.jpg') no-repeat center center fixed; /*Photo by Tim Mossholder*/
   -webkit-background-size: cover;
@@ -129,6 +131,14 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
   https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
 
   filter: invert(1);
+}
+
+.help-block {
+  color: #ff3333;
+  background-color: #FFEEEE;
+  border-radius: 3px;
+  padding: 2px 8px 2px 8px;
+  margin: 10px;
 }
 
 .navbar-inverse a.navbar-brand {
