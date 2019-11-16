@@ -21,7 +21,7 @@ Style Ideas/Tweaks/Issues
 /*  HTML ===================================================================================================== */
 
 body, p {
-  color: #0E5592; /* Font change done during creation process */
+  color: #dcdcdc; /* Font change done during creation process */
 }
 
 body {
@@ -39,11 +39,17 @@ $booyah-box-box-shadow: 1px 1px 2px 0 #d0d0d0;
 $booyah-box-border-color-a: #e4e4e4;
 $booyah-box-border-color-b: #bebebd;
 
+$booyah-box-background-color: #02010a;
+  /* "Blood red", but with R:102 changed to R:100 #640000 */
+  /* My original dark blue #02010a; Lighter version of dark blue gb: #040214; Lesson color: #fff */
+
+
 .booyah-box {
   -moz-box-shadow:    $booyah-box-box-shadow;
   -webkit-box-shadow: $booyah-box-box-shadow;
   box-shadow:         $booyah-box-box-shadow;
-  background: #fff;
+  background: $booyah-box-background-color;
+
   border: 1px solid #ccc;
   border-color: $booyah-box-border-color-a $booyah-box-border-color-b $booyah-box-border-color-a $booyah-box-border-color-b;
   padding: 10px;
@@ -123,6 +129,16 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
 
 .btn {
   border-radius: 0;
+}
+
+.form-control {
+  background-color: $booyah-box-background-color;
+  border-color: white;
+}
+
+.form-control:focus {
+  background-color: #464a4c;
+  color: white;
 }
 
 .navbar {
