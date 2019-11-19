@@ -11,9 +11,20 @@
 
   <ul>
       <% @course.sections.each do |section| %>
-        <% if section # ensures we don't try to display deleted section %>
+        <% if section # (my custom addition) ensures we don't try to display deleted section  %>
             <li>
                 <%= section.title %>
+                <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-sm' %>
+                <ul>
+                  <% section.lessons.each do |lesson| %>
+                    <li>
+                      <b><%= lesson.title %></b>
+                      -
+                      <%= lesson.subtitle %>
+                    </li>
+                  <% end %>
+                </ul>
+              <br class="clr" />
             </li>
         <% end %>
       <% end %>
