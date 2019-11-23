@@ -15,7 +15,9 @@ Style Ideas/Tweaks/Issues
   - Make the flash display area look better (it pushes the page). Try an overlay?
   -Issue: On log-in page: the 'remember me' checkbox goes off the screen
   - lessons_controller - 'render plain' looks terrible (is displayed in 2 places)
-*/
+    - Same goes for sections_controller and courses_controller
+    - All 3 share the exact same line of code
+  */
 
 
 
