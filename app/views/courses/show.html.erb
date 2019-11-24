@@ -15,11 +15,14 @@
         <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
       <% end %>
     </div>
-
-    <div class="col-sm-8 col-12"> 
-      <%= @course.description %>
-    </div>
   </div>
+
+    <br />
+    <% if @course.image.url %>
+      <div class="col-sm-8 col-12">
+        <%= image_tag @course.image.url, class: 'img-fluid' %>
+      </div>
+    <% end %>
 
   <div class="col-12">
     <% @course.sections.each do |section| %>
