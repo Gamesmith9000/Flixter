@@ -10,6 +10,6 @@
 #   stripe_api_key: sk_live_EeHnL644i6zo4Iyq4v1KdV9H
 #   stripe_publishable_key: pk_live_9lcthxpSIHbGwmdO941O1XVU
 
-AWS_ACCESS_KEY: "AKIA3RWIK2Y4O7ZIWS6C"
-AWS_SECRET_KEY: "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"
-AWS_BUCKET: "flixter-images-bucket-jfs"
+AWS_ACCESS_KEY: "AKIA3RWIK2Y4HYLGUAMK"
+AWS_SECRET_KEY: "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"
+AWS_BUCKET: "flixter-hope-this-attempt-doesnt-kick-the--bucket"
