@@ -43,14 +43,14 @@
       </nav>
 
 
-      <p>[Add logic here: Try an overlay for flash messages. Page is being stretched.]</p>
+      <p>[Add logic here: Try an overlay for flash messages. Page is being stretched. Warning: currently assumes its either info or danger, not both]</p>
 
       <% if notice.present? %>
-        <p class="alert alert-info"> <%= notice %> </p>
+        <p class="alert alert-info flash-overlay"> <%= notice %> </p>
       <% end %>
 
       <% if alert.present? %>
-        <p class="alert alert-danger"> <%= alert %> </p>
+        <p class="alert alert-danger flash-overlay"> <%= alert %> </p>
       <% end %>
 
 

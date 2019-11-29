@@ -10,6 +10,10 @@ Items with placeholder / possibly temporary styling:
   -(none)
 
 Style Ideas/Tweaks/Issues
+  - Need to adjust the image placement of the alert-danger overlay to go right for 2 reasons
+      (1) "Log in", etc header on login page gets covered by it
+      (2) If a danger and info ever get put together, one (danger) needs to be moved over
+      --> The x space needs to moved over an amount equal to the width of the info box width
   - The navbar shadow color is possibly inverted. Check on this
   - Scaling font size, based on screen size (see saved article)
     - See if this info can also be useful background scaling issue (listed somewhere below)
@@ -73,6 +77,20 @@ $booyah-box-background-color: #02010a;
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+}
+
+.flash-overlay{
+  position: absolute;
+  z-index: 2000000000;
+  opacity: 75%;
+
+  .alert-info{
+
+  }
+  .alert-danger{
+
+  }
+
 }
 
 .frosty {
