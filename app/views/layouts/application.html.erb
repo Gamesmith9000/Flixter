@@ -4,9 +4,9 @@
     <title>Flixter</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://vjs.zencdn.net/7.5.5/video-js.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -43,7 +43,7 @@
       </nav>
 
 
-      <p>[Add logic here: Try an overlay for flash messages. Page is being stretched. Warning: currently assumes its either info or danger, not both]</p>
+      <p>[Overlay for flash messages - Warning: currently assumes its either info or danger, not both]</p>
 
       <% if notice.present? %>
         <p class="alert alert-info flash-overlay"> <%= notice %> </p>
@@ -52,7 +52,6 @@
       <% if alert.present? %>
         <p class="alert alert-danger flash-overlay"> <%= alert %> </p>
       <% end %>
-
 
       <%= yield %>
     </div>
@@ -65,6 +64,10 @@
         <%= link_to 'Build a Course', new_instructor_course_path %><!-- Changed from 'Teach a Course' -->
       </div>
     </div>
+
+    <script src="https://vjs.zencdn.net/7.5.5/video.js"></script>
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
   </body>
 
 </html>
