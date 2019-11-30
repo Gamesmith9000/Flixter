@@ -24,7 +24,7 @@ class Instructor::LessonsController < ApplicationController
     end
 
     def lesson_params
-        params.require(:lesson).permit(:title, :subtitle)
+        params.require(:lesson).permit(:title, :subtitle, :video)
     end
 
 #Url to test making new lesson w/ wrong user: http://localhost:3030/instructor/sections/1/lessons/new

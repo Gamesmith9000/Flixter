@@ -10,7 +10,7 @@ Items with placeholder / possibly temporary styling:
   -(none)
 
 Style Ideas/Tweaks/Issues
-  - Need to adjust the image placement of the alert-danger overlay to go right for 2 reasons
+  - Need to adjust the placement of the alert-danger overlay to go right for 2 reasons
       (1) "Log in", etc header on login page gets covered by it
       (2) If a danger and info ever get put together, one (danger) needs to be moved over
       --> The x space needs to moved over an amount equal to the width of the info box width
@@ -23,7 +23,14 @@ Style Ideas/Tweaks/Issues
     - Same goes for sections_controller and courses_controller
     - All 3 share the exact same line of code
   - The background image (cat + laptop) does not line up properly for phones/smaller displays
+  
+
+  ISSUES:
+  - The footer is not sticking to bottom of screen. Will have to go back look into this
+  
   */
+
+  
 
 
 
