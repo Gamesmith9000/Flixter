@@ -5,6 +5,8 @@
 Items left with default lesson style / unstyled:
   -Font stacks (Helvetica)    
   -booyah-box
+  -.lesson background color
+  -.lesson a
 
 Items with placeholder / possibly temporary styling:
   -(none)
@@ -51,23 +53,22 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 /*  CLASSES ================================================================================================== */
 
-$booyah-box-box-shadow: 1px 1px 2px 0 #d0d0d0;
-$booyah-box-border-color-a: #e4e4e4;
-$booyah-box-border-color-b: #bebebd;
+$boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
+$boobox-border-color-a: #e4e4e4;
+$boobox-border-color-b: #bebebd;
 
-$booyah-box-background-color: #0f0f0f;
+$boobox-background-color: #0f0f0f;
   /* "Blood red", but with R:102 changed to R:100 #640000 */
   /* My original dark blue #02010a; Lighter version of dark blue gb: #040214; Lesson color: #fff */
 
-
 .booyah-box {
-  -moz-box-shadow:    $booyah-box-box-shadow;
-  -webkit-box-shadow: $booyah-box-box-shadow;
-  box-shadow:         $booyah-box-box-shadow;
-  background: $booyah-box-background-color;
+  -moz-box-shadow:    $boobox-box-shadow;
+  -webkit-box-shadow: $boobox-box-shadow;
+  box-shadow:         $boobox-box-shadow;
+  background:         $boobox-background-color;
 
   border: 1px solid #ccc;
-  border-color: $booyah-box-border-color-a $booyah-box-border-color-b $booyah-box-border-color-a $booyah-box-border-color-b;
+  border-color: $boobox-border-color-a $boobox-border-color-b $boobox-border-color-a $boobox-border-color-b;
   padding: 10px;
 
   h1, h2 {
@@ -129,10 +130,38 @@ $booyah-box-background-color: #0f0f0f;
   box-shadow: 0px 3px 8px #2a2a2a; /*Lesson color*/
 }
 
+.lesson{
+  background-color: black;
+  margin-top: 10px;
+  height: 130px;
+
+  a{
+    color: white;
+    font-family: "Helvetica Neue", Helvetica;
+    font-weight: 100;
+    font-size: 15px;
+
+    b{
+      font-weight: 100;
+      font-weight: 25px;
+    }
+  }
+}
+
+.section{
+  /*
+  NOTE:
+  I had originially put the code below into .lesson by accident. It actually looked really good
+
+  */
+  border: 1px solid;
+  border-color: $boobox-border-color-a $boobox-border-color-b $boobox-border-color-a $boobox-border-color-b;
+  padding: 20px;
+}
+
 /*  BOOTSTRAP ================================================================================================ */
 
 $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
-
 
 /* Add alert styles too */
 
@@ -141,7 +170,7 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
 }
 
 .form-control {
-  background-color: $booyah-box-background-color;
+  background-color: $boobox-background-color;
   border-color: white;
 }
 
