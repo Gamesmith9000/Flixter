@@ -42,16 +42,15 @@
         </div>
       </nav>
 
+      <p>
+        <% if notice.present? %>
+          <p class="alert alert-info"> <%= notice %> </p>
+        <% end %>
 
-      <p>[Overlay for flash messages - Warning: currently assumes its either info or danger, not both]</p>
-
-      <% if notice.present? %>
-        <p class="alert alert-info flash-overlay"> <%= notice %> </p>
-      <% end %>
-
-      <% if alert.present? %>
-        <p class="alert alert-danger flash-overlay"> <%= alert %> </p>
-      <% end %>
+        <% if alert.present? %>
+          <p class="alert alert-danger"> <%= alert %> </p>
+        <% end %>
+      </p>
 
       <%= yield %>
     </div>
