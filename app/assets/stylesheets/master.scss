@@ -1,9 +1,10 @@
 @import "bootstrap";
+@import "font-awesome";
 
 /*  NOTES & COMMENTS
 
 Items left with default lesson style / unstyled:
-  -Font stacks (Helvetica)    
+  -Font stacks (Helvetica) - this has been stuck in the variable $main-font-family (except for the navbar font family, which has its own variable)
   -booyah-box
   -.lesson background color
   -.lesson a
@@ -32,9 +33,15 @@ Style Ideas/Tweaks/Issues
   
   */
 
+
+  $main-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
+
   
+/*  MIXED ==================================================================================================== */
 
-
+h1, h2, h3, h4, h5, h6, .navbar {
+  margin: 0;
+}
 
 /*  HTML ===================================================================================================== */
 
@@ -47,8 +54,16 @@ body {
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar {
-  margin: 0;
+ul {
+  list-style-type: none;
+
+  .header {
+    font-size: 25px;
+
+    .fa {
+      font-size: 20px;
+    }
+  }
 }
 
 /*  CLASSES ================================================================================================== */
@@ -107,7 +122,7 @@ $boobox-background-color: #0f0f0f;
 
   h1, h2 {
     text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
-    font-family: "Helvetica Neue", Helvetica;
+    font-family: $main-font-family;
   }
 
   h1 {
@@ -119,7 +134,6 @@ $boobox-background-color: #0f0f0f;
   }
 }
 
-
 .hero {
   background: image_url('hero.jpg') no-repeat center center fixed; /*Photo by Tim Mossholder*/
   -webkit-background-size: cover;
@@ -130,14 +144,14 @@ $boobox-background-color: #0f0f0f;
   box-shadow: 0px 3px 8px #2a2a2a; /*Lesson color*/
 }
 
-.lesson{
+.lesson {
   background-color: black;
   margin-top: 10px;
   height: 130px;
 
   a{
     color: white;
-    font-family: "Helvetica Neue", Helvetica;
+    font-family: $main-font-family;
     font-weight: 100;
     font-size: 15px;
 
@@ -148,15 +162,36 @@ $boobox-background-color: #0f0f0f;
   }
 }
 
-.section{
-  /*
-  NOTE:
-  I had originially put the code below into .lesson by accident. It actually looked really good
+.lessons li {
+  background: black;
+  color: white;
+  margin: 10px;
+  font-family: $main-font-family;
+  font-weight: 100;
+  padding: 8px;
+  font-size: 15px;
 
-  */
+  b {
+    font-size: 25px;
+    font-weight: 100;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.section {
   border: 1px solid;
   border-color: $boobox-border-color-a $boobox-border-color-b $boobox-border-color-a $boobox-border-color-b;
   padding: 20px;
+}
+
+.section-li {
+  border: 1px solid;
+  border-color: $boobox-border-color-a $boobox-border-color-b $boobox-border-color-a $boobox-border-color-b;
+  padding: 20px;
+  margin: 20px;
 }
 
 /*  BOOTSTRAP ================================================================================================ */
