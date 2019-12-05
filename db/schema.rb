@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_12_05_161532) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
+    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "enrollments", force: :cascade do |t|
