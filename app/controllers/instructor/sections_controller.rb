@@ -37,7 +37,7 @@ class Instructor::SectionsController < ApplicationController
 
 
     def current_section
-        @current_section ||= Section.find(params[:section_id]) # This line generates an error
+        @current_section ||= Section.find(params[:id]) # This line generates an error
     end
 
     def current_course
