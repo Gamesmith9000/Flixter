@@ -7,12 +7,11 @@ class Lesson < ApplicationRecord
 
     def next_lesson
         lesson = section.lessons.where("row_order > ?", self.row_order).rank(:row_order).first
-        # I'm not sure why we didn't write the next if statement this way:
+        # I'm not sure why we didn't write the next if-statement this way:
         # if lesson.blank? && !section.next_section.blank?
         if lesson.blank? && section.next_section
             return section.next_section.lessons.rank(:row_order).first
         end
         return lesson
-    end
-    
+    end  
 end

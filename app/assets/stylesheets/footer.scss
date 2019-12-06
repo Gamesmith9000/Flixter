@@ -8,6 +8,14 @@ body {
   flex-direction: column;
 }
 
+.social a:hover {
+  text-decoration: none;
+}
+
+.social-button {
+  margin: 4px;
+}
+
 #flex-content-container {
   flex: 1;
 }
@@ -21,10 +29,11 @@ body {
   font-family: "Helvetica Neue", Helvetica; /*The lesson's font*/
   padding: 10px 0px;
   margin-top: 30px;
+  font-weight: 100; /*This line was added late in project, and seems like a strange addition*/
   
   a {
     color: white;
-    font-weight: 100; /* This line of code from the lesson didn't seam to have any result*/
+    font-weight: 100; /* This line of code from the lesson didn't seem to have any result*/
   }
 }
 

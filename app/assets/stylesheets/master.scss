@@ -20,6 +20,11 @@ Items with placeholder / possibly temporary styling:
 
 Style Ideas/Tweaks/Issues [Can take pics of write code to put as blog post]
   - Pick a text-highlight color. Remember to get the hex/rgb for the inverted version for the places that use 'inversion conversion'
+  - Consider changing the spacing of the social media buttons. Note that these are in footer.scss
+      - maybe something like:
+      [GH]                            [GH] 
+          [FB]        or          [FB] 
+              [Tw]            [Tw]    
   - When you reorder a section, it is apparent that the box is totally clear. Make sure to explicitly set the background to match booyah-box or whatever is behind it
   - The footer is not sticking to bottom of screen. Will have to go back look into this
   - Modal style needs to be redone. Idea: use the same background image for it as the header background. Possibly just do 'inversion conversion' on whole modal
