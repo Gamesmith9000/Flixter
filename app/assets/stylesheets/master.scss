@@ -13,6 +13,9 @@ Items with placeholder / possibly temporary styling:
   -(none)
 
 Style Ideas/Tweaks/Issues
+  - The footer is not sticking to bottom of screen. Will have to go back look into this
+  - Modal style needs to be redone. Idea: use the same background image for it as the header background. Possibly just do 'inversion conversion' on whole modal
+      - Note that buttons will likely have to be changed, though
   - Need to adjust the placement of the alert-danger overlay to go right for 2 reasons
       (1) "Log in", etc header on login page gets covered by it
       (2) If a danger and info ever get put together, one (danger) needs to be moved over
@@ -26,10 +29,6 @@ Style Ideas/Tweaks/Issues
     - Same goes for sections_controller and courses_controller
     - All 3 share the exact same line of code
   - The background image (cat + laptop) does not line up properly for phones/smaller displays
-  
-
-  ISSUES:
-  - The footer is not sticking to bottom of screen. Will have to go back look into this
   
   */
 
