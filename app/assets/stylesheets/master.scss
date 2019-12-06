@@ -11,16 +11,21 @@ Items left with default lesson style / unstyled:
   -booyah-box
   -.lesson background color
   -.lesson a
+  -Used the font-awesome icons from the lesson. There was a 'reorder' icon that I liked better... Maybe can use that instead?
+    - its <i class="fas fa-sort"></i>
+    - Instead of example ("fa fa-forward"), forward, I like angle-double-right & chevron-right
 
 Items with placeholder / possibly temporary styling:
   -(none)
 
-Style Ideas/Tweaks/Issues
+Style Ideas/Tweaks/Issues [Can take pics of write code to put as blog post]
+  - Pick a text-highlight color. Remember to get the hex/rgb for the inverted version for the places that use 'inversion conversion'
+  - When you reorder a section, it is apparent that the box is totally clear. Make sure to explicitly set the background to match booyah-box or whatever is behind it
   - The footer is not sticking to bottom of screen. Will have to go back look into this
   - Modal style needs to be redone. Idea: use the same background image for it as the header background. Possibly just do 'inversion conversion' on whole modal
       - Note that button colors will likely have to be changed, though
       - Also, could tinker with the input bars to be semi-transparent
-  - Need to adjust the placement of the alert-danger overlay to go right for 2 reasons
+  - (Old notes - this assumes the 'overlay' style) Need to adjust the placement of the alert-danger overlay to go right for 2 reasons
       (1) "Log in", etc header on login page gets covered by it
       (2) If a danger and info ever get put together, one (danger) needs to be moved over
       --> The x space needs to moved over an amount equal to the width of the info box width
@@ -35,7 +40,10 @@ Style Ideas/Tweaks/Issues
   - The background image (cat + laptop) does not line up properly for phones/smaller displays
   
   Functionality Issues:
-    - The simpleform bootstrap modals do not currently require any fields be present when submitting
+    - (!) The simpleform bootstrap modals do not currently require any fields be present when submitting
+      - Remember to revisit old notes to verify that I did everything correctly before moving on with a fix
+    - Lesson 37 has us leave an edge case in the next_lesson method. Seems like it could be addressed fairly simply...
+
   */
 
 
