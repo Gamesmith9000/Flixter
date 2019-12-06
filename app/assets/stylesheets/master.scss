@@ -3,6 +3,9 @@
 
 /*  NOTES & COMMENTS
 
+NOTE ABOUT INVERSION:
+  - The highlight color is also inverted
+
 Items left with default lesson style / unstyled:
   -Font stacks (Helvetica) - this has been stuck in the variable $main-font-family (except for the navbar font family, which has its own variable)
   -booyah-box
@@ -15,7 +18,8 @@ Items with placeholder / possibly temporary styling:
 Style Ideas/Tweaks/Issues
   - The footer is not sticking to bottom of screen. Will have to go back look into this
   - Modal style needs to be redone. Idea: use the same background image for it as the header background. Possibly just do 'inversion conversion' on whole modal
-      - Note that buttons will likely have to be changed, though
+      - Note that button colors will likely have to be changed, though
+      - Also, could tinker with the input bars to be semi-transparent
   - Need to adjust the placement of the alert-danger overlay to go right for 2 reasons
       (1) "Log in", etc header on login page gets covered by it
       (2) If a danger and info ever get put together, one (danger) needs to be moved over
@@ -30,6 +34,8 @@ Style Ideas/Tweaks/Issues
     - All 3 share the exact same line of code
   - The background image (cat + laptop) does not line up properly for phones/smaller displays
   
+  Functionality Issues:
+    - The simpleform bootstrap modals do not currently require any fields be present when submitting
   */
 
 
@@ -213,6 +219,11 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
   color: white;
 }
 
+/*  The style that covers the whole of a modal
+.modal-content {
+
+}
+*/
 .navbar {
   font-family: $navbar-font-family;
   font-weight: 200;
@@ -237,5 +248,4 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
   font-family: $navbar-font-family;
   font-weight: 100;
   color: white;
-
 }
