@@ -14,13 +14,17 @@ Items left with default lesson style / unstyled:
   -Used the font-awesome icons from the lesson. There was a 'reorder' icon that I liked better... Maybe can use that instead?
     - its <i class="fas fa-sort"></i>
     - Instead of example ("fa fa-forward"), forward, I like angle-double-right & chevron-right
-
+  - Content wise, the footer has the text than was provided by course
 Items with placeholder / possibly temporary styling:
   -(none)
 
 Style Ideas/Tweaks/Issues [Can take pics of write code to put as blog post]
+  - Paragraph text starts more left than H1 and H2 for some reason (good example: Privacy Policy page)
+  - Footer headlines and links are nearly indistinguishable from each other
+    - It looks like <b> might be less bold than normal font!
+  - Move the Github logo over a little to the right
   - Pick a text-highlight color. Remember to get the hex/rgb for the inverted version for the places that use 'inversion conversion'
-  - Consider changing the spacing of the social media buttons. Note that these are in footer.scss
+  - Consider changing the spacing of the social media buttons. Note that these are in footer.scss [This is moot if I don't get the 2 other accounts connected - which I don't have ready]
       - maybe something like:
       [GH]                            [GH] 
           [FB]        or          [FB] 
