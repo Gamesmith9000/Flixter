@@ -2,6 +2,15 @@ class Lesson < ApplicationRecord
     belongs_to :section
     mount_uploader :video, VideoUploader
 
+    validates_presence_of :video
+    validates_integrity_of :video
+    validates_processing_of :video
+
+    validates :title, presence: true
+    validates :subtitle, presence: true
+    
+    
+
     include RankedModel
     ranks :row_order, with_same: :section_id
 

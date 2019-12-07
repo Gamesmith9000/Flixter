@@ -72,7 +72,7 @@ body, p {
 }
 
 body {
-  background: image_url('bg.png'); /* Chosen font stack: */
+  background: image_url('bg.png'); /* Chosen font stack below: */
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
@@ -226,31 +226,69 @@ $navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be 
   border-radius: 0;
 }
 
+/*
 .form-control {
   background-color: $boobox-background-color;
   border-color: white;
+  
 }
 
 .form-control:focus {
   background-color: #464a4c;
   color: white;
 }
-
-/*  The style that covers the whole of a modal
-.modal-content {
-
-}
 */
+/*  The style that covers the whole of a modal*/
+
+::selection {
+  background-color: #3592CE;
+}
+
+$modal-header-footer-bg-color: rgba(256, 256, 256, 0.60);
+$submit-button-primary-color-inverted: #fd8a27;
+$text-selection-bg-color-inverted: #cc6f00;
+$topnav-bg-image-url: 'embossed-diamond.png'; /* original was 'ripples.png' */
+
+.modal-content {
+  /* Will be borrowing most of the stylings of the top navbar */
+/*
+  background: image_url($topnav-bg-image-url);
+  */
+  filter: invert(1);
+
+  .btn-primary {
+    background-color: $submit-button-primary-color-inverted;
+    border-color: $submit-button-primary-color-inverted;
+    color: black;
+  }
+  .modal-header {
+    background-color: $modal-header-footer-bg-color;
+  }
+  .modal-footer {
+    background-color: $modal-header-footer-bg-color;
+  }
+  ::selection {
+    background-color: $text-selection-bg-color-inverted;
+    /* WARNING: The opacity is likely screwed up here. The result is that the navbar highlighting looks lighter than the  */
+    /* Might be simpler to just make the modal and header have a separate highlight color from the rest of the page */
+  }
+}
+
 .navbar {
   font-family: $navbar-font-family;
   font-weight: 200;
   box-shadow: 0px 1px 3px #2a2a2a; /* Lesson color was #2a2a2a - inverted version of that ends up as #d5d5d5 */
-  background: image_url('ripples.png'); /* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
+  background: image_url($topnav-bg-image-url); /* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
   
+
   /* For the backstory on this inversion styling, see my blog post:
   https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
 
   filter: invert(1);
+
+  ::selection {
+    background-color: $text-selection-bg-color-inverted;
+  }
 }
 
 .invalid-feedback {
