@@ -6,7 +6,7 @@ $main-font-family: "Helvetica Neue", Helvetica;
 /*  HTML ===================================================================================================== */
 
 body {
-  background: image_url('bg.png'); /* Chosen font stack below: */
+  background: image_url('bg.png');
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
 }
 
@@ -22,12 +22,6 @@ h6 {
   font-size: 22px;
   padding-bottom: 10px;
   text-decoration: underline;
-}
-
-input, textarea
-{
-  background-color: black !important;
-  color: white !important;
 }
 
 ul {
@@ -187,10 +181,12 @@ a.navbar-brand {
   border-radius: 0;
 }
 
-.btn-primary {
-  background-color: $submit-button-primary-color-inverted;
-  border-color: $submit-button-primary-color-inverted;
-  color: black;
+.form-group {
+  input, textarea
+  {
+    background-color: black !important;
+    color: white !important;
+  }
 }
 
 .invalid-feedback {
@@ -206,6 +202,12 @@ a.navbar-brand {
 
   ::selection {
     background-color: $text-selection-bg-color-inverted;
+  }
+
+  .btn-primary {
+    background-color: $submit-button-primary-color-inverted;
+    border-color: $submit-button-primary-color-inverted;
+    color: black;
   }
 
   .modal-body {
