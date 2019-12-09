@@ -1,79 +1,33 @@
 @import "bootstrap";
 @import "font-awesome";
 
-/*  NOTES & COMMENTS
-
-NOTE ABOUT INVERSION:
-  - The highlight color is also inverted
-
-Items left with default lesson style / unstyled:
-  -Font stacks (Helvetica) - this has been stuck in the variable $main-font-family (except for the navbar font family, which has its own variable)
-  -booyah-box
-  -.lesson background color
-  -.lesson a
-  -Used the font-awesome icons from the lesson. There was a 'reorder' icon that I liked better... Maybe can use that instead?
-    - its <i class="fas fa-sort"></i>
-    - Instead of example ("fa fa-forward"), forward, I like angle-double-right & chevron-right
-  - Content wise, the footer has the text than was provided by course
-Items with placeholder / possibly temporary styling:
-  -(none)
-
-Style Ideas/Tweaks/Issues [Can take pics of write code to put as blog post]
-  - Paragraph text starts more left than H1 and H2 for some reason (good example: Privacy Policy page)
-  - Footer headlines and links are nearly indistinguishable from each other
-    - It looks like <b> might be less bold than normal font!
-  - Move the Github logo over a little to the right
-  - Pick a text-highlight color. Remember to get the hex/rgb for the inverted version for the places that use 'inversion conversion'
-  - Consider changing the spacing of the social media buttons. Note that these are in footer.scss [This is moot if I don't get the 2 other accounts connected - which I don't have ready]
-      - maybe something like:
-      [GH]                            [GH] 
-          [FB]        or          [FB] 
-              [Tw]            [Tw]    
-  - When you reorder a section, it is apparent that the box is totally clear. Make sure to explicitly set the background to match booyah-box or whatever is behind it
-  - The footer is not sticking to bottom of screen. Will have to go back look into this
-  - Modal style needs to be redone. Idea: use the same background image for it as the header background. Possibly just do 'inversion conversion' on whole modal
-      - Note that button colors will likely have to be changed, though
-      - Also, could tinker with the input bars to be semi-transparent
-  - (Old notes - this assumes the 'overlay' style) Need to adjust the placement of the alert-danger overlay to go right for 2 reasons
-      (1) "Log in", etc header on login page gets covered by it
-      (2) If a danger and info ever get put together, one (danger) needs to be moved over
-      --> The x space needs to moved over an amount equal to the width of the info box width
-  - The navbar shadow color is possibly inverted. Check on this
-  - Scaling font size, based on screen size (see saved article)
-    - See if this info can also be useful background scaling issue (listed somewhere below)
-  - Make the flash display area look better (it pushes the page). Try an overlay?
-  -Issue: On log-in page: the 'remember me' checkbox goes off the screen
-  - lessons_controller - 'render plain' looks terrible (is displayed in 2 places)
-    - Same goes for sections_controller and courses_controller
-    - All 3 share the exact same line of code
-  - The background image (cat + laptop) does not line up properly for phones/smaller displays
-  
-  Functionality Issues:
-    - (!) The simpleform bootstrap modals do not currently require any fields be present when submitting
-      - Remember to revisit old notes to verify that I did everything correctly before moving on with a fix
-    - Lesson 37 has us leave an edge case in the next_lesson method. Seems like it could be addressed fairly simply...
-
-  */
-
-
-  $main-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
-
-  
-/*  MIXED ==================================================================================================== */
-
-h1, h2, h3, h4, h5, h6, .navbar {
-  margin: 0;
-}
+$main-font-family: "Helvetica Neue", Helvetica;
 
 /*  HTML ===================================================================================================== */
+
+body {
+  background: image_url('bg.png'); /* Chosen font stack below: */
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
 
 body, p {
   color: #dcdcdc; /* Font change done during creation process */
 }
 
-body {
-  background: image_url('bg.png'); /* Chosen font stack below: */
-  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h6 {
+  font-size: 22px;
+  padding-bottom: 10px;
+  text-decoration: underline;
+}
+
+input, textarea
+{
+  background-color: black !important;
+  color: white !important;
 }
 
 ul {
@@ -88,15 +42,12 @@ ul {
   }
 }
 
-/*  CLASSES ================================================================================================== */
-
-$boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
-$boobox-border-color-a: #e4e4e4;
-$boobox-border-color-b: #bebebd;
+/*  CUSTOM CLASSES ============================================================================================ */
 
 $boobox-background-color: #0f0f0f;
-  /* "Blood red", but with R:102 changed to R:100 #640000 */
-  /* My original dark blue #02010a; Lighter version of dark blue gb: #040214; Lesson color: #fff */
+$boobox-border-color-a: #e4e4e4;
+$boobox-border-color-b: #bebebd;
+$boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
 
 .booyah-box {
   -moz-box-shadow:    $boobox-box-shadow;
@@ -111,7 +62,6 @@ $boobox-background-color: #0f0f0f;
   h1, h2 {
     margin: 10px;
   }
-
 }
 
 .clr {
@@ -122,20 +72,6 @@ $boobox-background-color: #0f0f0f;
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
-}
-
-.flash-overlay{
-  position: absolute;
-  z-index: 2000000000;
-  opacity: 75%;
-
-  .alert-info{
-
-  }
-  .alert-danger{
-
-  }
-
 }
 
 .frosty {
@@ -162,8 +98,8 @@ $boobox-background-color: #0f0f0f;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 370px;          /*This value (the lesson recommented) seems strange or arbitrary. But coincidentally, the perfect part of image displays*/
-  box-shadow: 0px 3px 8px #2a2a2a; /*Lesson color*/
+  height: 370px;
+  box-shadow: 0px 3px 8px #2a2a2a;
 }
 
 .lesson {
@@ -171,13 +107,13 @@ $boobox-background-color: #0f0f0f;
   margin-top: 10px;
   height: 130px;
 
-  a{
+  a {
     color: white;
     font-family: $main-font-family;
     font-weight: 100;
     font-size: 15px;
 
-    b{
+    b {
       font-weight: 100;
       font-weight: 25px;
     }
@@ -203,6 +139,15 @@ $boobox-background-color: #0f0f0f;
   }
 }
 
+.priv-pg-p p {
+  margin-left: 25px;
+  margin-right: 12px;
+}
+
+.social-button {
+  margin-left: 18px;
+}
+
 .section {
   border: 1px solid;
   border-color: $boobox-border-color-a $boobox-border-color-b $boobox-border-color-a $boobox-border-color-b;
@@ -216,79 +161,36 @@ $boobox-background-color: #0f0f0f;
   margin: 20px;
 }
 
-/*  BOOTSTRAP ================================================================================================ */
+/*  BOOTSTRAP ================================================================================================== */
 
-$navbar-font-family: "Helvetica Neue", Helvetica; /* Can adjust this if need be */
-
-/* Add alert styles too */
-
-.btn {
-  border-radius: 0;
-}
-
-/*
-.form-control {
-  background-color: $boobox-background-color;
-  border-color: white;
-  
-}
-
-.form-control:focus {
-  background-color: #464a4c;
-  color: white;
-}
-*/
-/*  The style that covers the whole of a modal*/
+$modal-header-footer-bg-color: rgba(256, 256, 256, 0.60);
+$nav-link-font-color: #000000e6;
+$navbar-font-family: "Helvetica Neue", Helvetica;
+$submit-button-primary-color-inverted: #fd8a27;
+$text-selection-bg-color-inverted: #cc6f00;
+$topnav-bg-image-url: 'embossed-diamond.png';
 
 ::selection {
   background-color: #3592CE;
 }
 
-$modal-header-footer-bg-color: rgba(256, 256, 256, 0.60);
-$submit-button-primary-color-inverted: #fd8a27;
-$text-selection-bg-color-inverted: #cc6f00;
-$topnav-bg-image-url: 'embossed-diamond.png'; /* original was 'ripples.png' */
-
-.modal-content {
-  /* Will be borrowing most of the stylings of the top navbar */
-/*
-  background: image_url($topnav-bg-image-url);
-  */
-  filter: invert(1);
-
-  .btn-primary {
-    background-color: $submit-button-primary-color-inverted;
-    border-color: $submit-button-primary-color-inverted;
-    color: black;
-  }
-  .modal-header {
-    background-color: $modal-header-footer-bg-color;
-  }
-  .modal-footer {
-    background-color: $modal-header-footer-bg-color;
-  }
-  ::selection {
-    background-color: $text-selection-bg-color-inverted;
-    /* WARNING: The opacity is likely screwed up here. The result is that the navbar highlighting looks lighter than the  */
-    /* Might be simpler to just make the modal and header have a separate highlight color from the rest of the page */
-  }
+a.nav-link {
+  color: $nav-link-font-color !important;
 }
 
-.navbar {
-  font-family: $navbar-font-family;
-  font-weight: 200;
-  box-shadow: 0px 1px 3px #2a2a2a; /* Lesson color was #2a2a2a - inverted version of that ends up as #d5d5d5 */
-  background: image_url($topnav-bg-image-url); /* Another cool pattern by Olivia Harmon from Subtle Patterns (https://www.toptal.com/designers/subtlepatterns) */
-  
+a.navbar-brand {
+  color: $nav-link-font-color !important;
+  text-shadow: 2px 2px 2px #56ffff;
+}
 
-  /* For the backstory on this inversion styling, see my blog post:
-  https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
+.btn {
+  border-radius: 0;
+}
 
-  filter: invert(1);
-
-  ::selection {
-    background-color: $text-selection-bg-color-inverted;
-  }
+.btn-primary {
+  background-color: $submit-button-primary-color-inverted;
+  border-color: $submit-button-primary-color-inverted;
+  color: black;
 }
 
 .invalid-feedback {
@@ -299,8 +201,48 @@ $topnav-bg-image-url: 'embossed-diamond.png'; /* original was 'ripples.png' */
   margin: 10px;
 }
 
+.modal-content {
+  filter: invert(1);
+
+  ::selection {
+    background-color: $text-selection-bg-color-inverted;
+  }
+
+  .modal-body {
+    color: $nav-link-font-color;  
+  }
+  .modal-footer {
+    background-color: $modal-header-footer-bg-color;
+  }
+  .modal-header {
+    background-color: $modal-header-footer-bg-color;
+    color: $nav-link-font-color;
+  }
+}
+
+.navbar {
+  font-family: $navbar-font-family;
+  font-weight: 200;
+  box-shadow: 0px 1px 3px #2a2a2a;
+  background: image_url($topnav-bg-image-url);
+  margin: 0;
+
+  filter: invert(1);
+
+  /* For the backstory on this inversion styling, see my blog post:
+  https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
+
+  ::selection {
+    background-color: $text-selection-bg-color-inverted;
+  }
+}
+
 .navbar-inverse a.navbar-brand {
   font-family: $navbar-font-family;
   font-weight: 100;
   color: white;
+}
+
+.pas-button {
+  margin-right: 36px;
 }

@@ -63,27 +63,27 @@
         <div class="row">
 
           <div class="col-12 col-sm-3">
-            <b>Teachers</b>
-            <br />
+            <h6>Teachers</h6>
             <%= link_to 'Build a Course', new_instructor_course_path %><!-- Changed from 'Teach a Course' -->
             <br />
             <%= link_to 'My Dashboard', dashboard_path %>
           </div>
 
           <div class="col-12 col-sm-3">
-            <b>About</b>
-            <br />
-            <%= link_to 'Team', '#' %>
+            <h6>About</h6>
+            <!-- Non-necessary pages
+            %= link_to 'Team', '#' %>
             <br />
             <%= link_to 'Careers', '#' %>
-            <br />
+            <br /
+            -->
             <%= link_to 'Privacy Policy', privacy_path %>        
           </div>
 
           <div class="col-12 col-sm-3">
-            <b>Contact</b>
-            <br />
-            my@email.com
+            <h6>Contact</h6>
+
+            JustinExample@Example.org
             <br />
             One Kendall Square
             <br />
@@ -91,9 +91,8 @@
           </div>
 
           <div class="col-12 col-sm-3 social">
-            <b>Social</b>
-            <br />
-            <br />
+            <h6>Social</h6>
+
             <%= link_to 'https://github.com/Gamesmith9000/Flixter' do %>
               <span class="fa fa-github-square fa-2x social-button"></span>
             <% end %>

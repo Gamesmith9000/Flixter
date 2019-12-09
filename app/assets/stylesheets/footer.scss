@@ -1,11 +1,15 @@
-html {
-  height: 100%
-}
-
 body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+html {
+  height: 100%
+}
+
+.footer-bold {
+  font-weight: 300 !important;
 }
 
 .social a:hover {
