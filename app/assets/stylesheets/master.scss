@@ -8,6 +8,7 @@ $main-font-family: "Helvetica Neue", Helvetica;
 body {
   background: image_url('bg.png');
   font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+  margin-top: 4.25rem;
 }
 
 body, p {
@@ -174,6 +175,7 @@ a.nav-link {
 
 a.navbar-brand {
   color: $nav-link-font-color !important;
+  font-size: 1.25rem;
   text-shadow: 2px 2px 2px #56ffff;
 }
 
