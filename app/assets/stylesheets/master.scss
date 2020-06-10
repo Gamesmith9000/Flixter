@@ -1,9 +1,11 @@
 @import "bootstrap";
 @import "font-awesome";
 
+$boobox-background-color: #0f0f0f;
+$boobox-border-color-a: #e4e4e4;
+$boobox-border-color-b: #bebebd;
+$boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
 $main-font-family: "Helvetica Neue", Helvetica;
-
-/*  HTML ===================================================================================================== */
 
 body {
   background: image_url('bg.png');
@@ -37,13 +39,6 @@ ul {
   }
 }
 
-/*  CUSTOM CLASSES ============================================================================================ */
-
-$boobox-background-color: #0f0f0f;
-$boobox-border-color-a: #e4e4e4;
-$boobox-border-color-b: #bebebd;
-$boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
-
 .booyah-box {
   -moz-box-shadow:    $boobox-box-shadow;
   -webkit-box-shadow: $boobox-box-shadow;
@@ -64,9 +59,9 @@ $boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
 }
 
 .feature{
-  width: 100%;
   padding-left: 5%;
   padding-right: 5%;
+  width: 100%;
 }
 
 .frosty {
@@ -74,8 +69,8 @@ $boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
   color: white;
 
   h1, h2 {
-    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
     font-family: $main-font-family;
+    text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
   }
 
   h1 {
@@ -93,24 +88,24 @@ $boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 370px;
   box-shadow: 0px 3px 8px #2a2a2a;
+  height: 370px;
 }
 
 .lesson {
   background-color: black;
-  margin-top: 10px;
   height: 130px;
+  margin-top: 10px;
 
   a {
     color: white;
     font-family: $main-font-family;
-    font-weight: 100;
     font-size: 15px;
+    font-weight: 100;
 
     b {
+      font-size: 25px;
       font-weight: 100;
-      font-weight: 25px;
     }
   }
 }
@@ -118,11 +113,11 @@ $boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
 .lessons li {
   background: black;
   color: white;
-  margin: 10px;
   font-family: $main-font-family;
-  font-weight: 100;
-  padding: 8px;
   font-size: 15px;
+  font-weight: 100;
+  margin: 10px;
+  padding: 8px;
 
   b {
     font-size: 25px;
@@ -134,7 +129,7 @@ $boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
   }
 }
 
-.priv-pg-p p {
+.priv-pg p {
   margin-left: 25px;
   margin-right: 12px;
 }
@@ -156,7 +151,7 @@ $boobox-box-shadow: 1px 1px 2px 0 #d0d0d0;
   margin: 20px;
 }
 
-/*  BOOTSTRAP ================================================================================================== */
+//  BOOTSTRAP
 
 $modal-header-footer-bg-color: rgba(256, 256, 256, 0.60);
 $nav-link-font-color: #000000e6;
@@ -184,8 +179,7 @@ a.navbar-brand {
 }
 
 .form-group {
-  input, textarea
-  {
+  input, textarea {
     background-color: black !important;
     color: white !important;
   }
@@ -225,16 +219,14 @@ a.navbar-brand {
 }
 
 .navbar {
+  background: image_url($topnav-bg-image-url);
+  box-shadow: 0px 1px 3px #2a2a2a;
   font-family: $navbar-font-family;
   font-weight: 200;
-  box-shadow: 0px 1px 3px #2a2a2a;
-  background: image_url($topnav-bg-image-url);
   margin: 0;
 
   filter: invert(1);
-
-  /* For the backstory on this inversion styling, see my blog post:
-  https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
+  /* For the backstory on this inversion styling, see my blog post: https://medium.com/@smith.julian.f/navbar-inversion-conversion-d56e8d3f8ac6 */
 
   ::selection {
     background-color: $text-selection-bg-color-inverted;
@@ -242,9 +234,9 @@ a.navbar-brand {
 }
 
 .navbar-inverse a.navbar-brand {
+  color: white;
   font-family: $navbar-font-family;
   font-weight: 100;
-  color: white;
 }
 
 .pas-button {
