@@ -18,5 +18,4 @@ class LessonsController < ApplicationController
             redirect_to course_path(current_lesson.section.course), alert: 'You must be enrolled in this course before you can view its lessons.'
         end
     end
-
 end
