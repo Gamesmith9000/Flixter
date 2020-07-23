@@ -31,6 +31,14 @@ html {
     color: white;
     font-weight: 100;
   }
+
+  p {
+    word-break: break-word;
+  }
+
+  .row {
+    text-align: center;
+  }
 }
 
 .footer-bold {
