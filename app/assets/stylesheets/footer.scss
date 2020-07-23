@@ -1,7 +1,11 @@
+$height-adjustment: -2px;
+$margin-top: 30px;
+$min-height: 100px;
+
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: calc(100% - calc(#{$min-height} - #{$margin-top} + #{$height-adjustment}));
 }
 
 html {
@@ -18,10 +22,9 @@ html {
   color: white;
   font-family: "Helvetica Neue", Helvetica; /*The lesson's font*/
   font-weight: 100; /*This line was added late in project, and seems like a strange addition*/
-  margin-top: 30px;
-  min-height: 100px;
+  margin-top: $margin-top;
+  min-height: $min-height;
   padding: 10px 0px;
-  position: fixed;
   width: 100%;
 
   a {
