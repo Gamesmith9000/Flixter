@@ -179,8 +179,15 @@ a.navbar-brand {
   text-shadow: 2px 2px 2px #56ffff;
 }
 
-.btn {
-  border-radius: 0;
+.btn:not(.btn-success) {
+  background-color: black;
+  border-color: white;
+  color: white;
+
+  &:hover {
+    background-color: #1c1c1c;
+    color: white;
+  }
 }
 
 .form-group {
