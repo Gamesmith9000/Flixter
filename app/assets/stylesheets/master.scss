@@ -179,7 +179,7 @@ a.navbar-brand {
   text-shadow: 2px 2px 2px #56ffff;
 }
 
-.btn:not(.btn-success) {
+.btn:not(.btn-success):not(.btn-danger):not(.btn-warning) {
   background-color: black;
   border-color: white;
   color: white;
