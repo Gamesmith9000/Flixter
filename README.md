@@ -19,7 +19,7 @@ Live site: https://flixter-julian-smith.herokuapp.com/
 
 * Click on `Flixter` in the navigation bar to return to the home page.
 * Click on the `My Dashboard` navigation link to view lists of the the courses you are enrolled in and have created, respectively. This is the quickest way to return to a course later.
-* Note that all of the content on this app is free to access. Although there may be priced courses on this listed, these are just to demonstrate the payment processing capabilites. Priced courses can be accessed using the sample credit card (more details are provided in the next section). 
+* Note that all of the content on this app is free to access. Although there may be priced courses listed, these are just to demonstrate the payment processing capabilites. Priced courses can be accessed using the sample credit card (more details are provided in the next section). 
 
 ### Enrolling in a Course
 
@@ -31,12 +31,28 @@ Live site: https://flixter-julian-smith.herokuapp.com/
   * Expiration Date: `(Any future date)`
 * Courses are listed in sections, and each section contains one or more lessons. Click on the name of the lesson to get started.
 
+### Creating a Course
+
+* Click on the `Build a Course` link in the footer to begin.
+* Enter a valid title, description, cost (note that a cost of `0` is valid), and upload an image in the form, then submit.
+* You will be taken to the page for your course. You always have the option of previewing your course content with the `Preview As Student...` button.
+  * To return from previewing a lesson as a student, click on the `Administer` button.
+
+#### Sections
+
+* Your course must have at least one section. Each section will house lessons. 
+* Create one by clicking `Add a new section...`, enter a valid section title, then submit.
+* Once you have more than one section, you can change their order by dragging and dropping section boxes. 
+
+#### Lessons
+* To add a lesson, click on the `New Lesson...` button in the section in which you want the course to reside. Enter a valid title and subtitle, upload a lesson video, then submit.
+* Once you have multiple courses in a section, you can change their order by dragging and dropping lesson boxes.
 
 ## Built With
 
 * [Amazon S3](https://aws.amazon.com/s3/) - Media storage
-* [Bootstrap](https://getbootstrap.com/) - Front-End library
+* [Bootstrap](https://getbootstrap.com/) - Front-end library
 * [Heroku](https://www.heroku.com/) - Deployment
 * [Ruby on Rails](https://rubyonrails.org/) - Web application framework
 * [PostgreSQL](https://www.postgresql.org/) - Database
-* [Stripe](https://stripe.com/) - Payment Processing
+* [Stripe](https://stripe.com/) - Payment processing
