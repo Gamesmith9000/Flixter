@@ -4,7 +4,7 @@ Live site: https://flixter-julian-smith.herokuapp.com/
 
 # About
 
-
+This two-sided marketplace is a platform for user-generated video lessons. The two-sided component means there is different functionality for the two roles of student and teacher. Users are able to to enroll in and create courses.
 
 ## Getting Started
 
@@ -34,7 +34,10 @@ Live site: https://flixter-julian-smith.herokuapp.com/
 ### Creating a Course
 
 * Click on the `Build a Course` link in the footer to begin.
-* Enter a valid title, description, cost (note that a cost of `0` is valid), and upload an image in the form, then submit.
+* Enter a valid title, description, cost (note that a cost of `0` is valid), and upload an image in the form (this will act as the preview image on the course page), then submit.
+
+![FlixterCreate1](https://user-images.githubusercontent.com/55506831/88496923-46485680-cf84-11ea-90b5-62107350659b.PNG)
+
 * You will be taken to the page for your course. You always have the option of previewing your course content with the `Preview As Student...` button.
   * To return from previewing a lesson as a student, click on the `Administer` button.
 
