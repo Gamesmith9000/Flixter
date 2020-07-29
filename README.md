@@ -8,8 +8,6 @@ This two-sided marketplace is a platform for user-generated video lessons. The t
 
 ## Getting Started
 
-
-
 ### Accounts
 
 * A user account is required in order to enroll in, view, or create courses. Simply click the `Sign Up` link to get started.
@@ -24,6 +22,9 @@ This two-sided marketplace is a platform for user-generated video lessons. The t
 ### Enrolling in a Course
 
 * Click on `See All Courses` to be taken to a list of all courses available for you to sign up for.
+
+![FlixterEnroll1](https://user-images.githubusercontent.com/55506831/88851324-3b730900-d1b2-11ea-9d31-e9212aac08f4.PNG)
+
 * When you find a course that interests you, click on the `More Details` button for that course.
 * To view course content, need to be enrolled. For courses listed as free, simply click the `Enroll` button. For other courses, click on the `Pay with Card` button and enter the sample credit card information below (see prior notes about pricing).
   * Number: `4242424242424242`
@@ -40,6 +41,8 @@ This two-sided marketplace is a platform for user-generated video lessons. The t
 
 * You will be taken to the page for your course. You always have the option of previewing your course content with the `Preview As Student...` button.
   * To return from previewing a lesson as a student, click on the `Administer` button.
+  
+![Flixter1](https://user-images.githubusercontent.com/55506831/88851321-3ada7280-d1b2-11ea-84e9-90406bf91206.PNG)
 
 #### Sections
 
